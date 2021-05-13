@@ -1,0 +1,54 @@
+ion-content{
+    --ion-background-color:#fff;
+}
+.background-container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background: url('../../assets/icon/doce.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:50%;
+    flex-direction: column;
+    justify-content: center;
+}
+ion-card{
+    text-align: center;
+    background: transparent;
+    box-shadow: none;
+    img{
+        margin-top: 110px;
+        height: 15rem;
+        width: 15rem;
+    }
+    ion-card-tittle{
+        font-size: 20px;
+        color: #D2EDDD;
+        font-weight: 400;
+        
+    }
+    ion-card-content{
+        margin-top: 20px;
+
+        ion-button{
+        width:180px;
+        height: 60px;
+        --border-radius: 40px;
+        --background:#e06890;
+        color: #7b98d3;
+        font-weight: 400;
+        transform: none;
+        font-size: 20px;
+        }
+    }
+}
+@media screen and (min-width:500px){
+    .background-filter{
+        height: 100%;
+        width: 100%;
+        background: rgba(27, 0, 19, 0.9);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
