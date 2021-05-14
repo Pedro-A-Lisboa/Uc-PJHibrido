@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-
+import { AutenticacaoService } from './../servicos/autenticacao.service';
+import {NavController} from '@ionic/angular';
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -8,11 +8,30 @@ import { Router } from '@angular/router';
 })
 export class LoginPage implements OnInit {
 
-  constructor(private router: Router) { }
+  email:string;
+  senha:string;
+
+  constructor(private servico: AutenticacaoService,private nav: NavController) { }
 
   ngOnInit() {
   }
-logado(){
-  this.router.navigate(['home']);
+logar(){
+  console.log("Método cadastra no ts da página");
+    let usuario = {};
+
+    usuario['email']=this.email;
+    usuario['senha']=this.senha;
+    
+    console.log(usuario);
+
+    this.servico.logar(usuario).then(
+      resolve=>{
+        this.nav.navigateForward('dashboard');
+      },
+      error =>{
+        console.log("Deu erro.");
+      }
+    );
+
 }
 }

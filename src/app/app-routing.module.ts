@@ -36,6 +36,14 @@ const routes: Routes = [
     path: 'adm',
     loadChildren: () => import('./adm/adm.module').then( m => m.AdmPageModule)
   },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+  },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
 ];
 
 @NgModule({

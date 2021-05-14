@@ -14,15 +14,15 @@
             </ion-card-header>
             <ion-card-content>
                 <ion-item>
-                    <ion-input placeholder="Login"></ion-input>
+                    <ion-input type="text" [(ngModel)]="email" placeholder="Login"></ion-input>
                 </ion-item>
                 <ion-item>
-                    <ion-input type="password" placeholder="Senha"></ion-input>
+                    <ion-input type="password" [(ngModel)]="senha" placeholder="Senha"></ion-input>
                 </ion-item>
                 <a href="http://localhost:8100/recuperarsenha">Esqueci a senha</a>
 
                 <div class="bottom-section">
-                    <ion-button (click)="logado()">Entrar</ion-button>
+                    <ion-button (click)="logar()">Entrar</ion-button>
                     <span>Ainda não tenha uma conta? <a href="http://localhost:8100/entrar">Cadastra-se</a>.</span>
                 </div>
             </ion-card-content>

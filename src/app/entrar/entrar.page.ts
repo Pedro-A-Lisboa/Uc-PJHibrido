@@ -1,5 +1,6 @@
+import { AutenticacaoService } from './../servicos/autenticacao.service';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import {NavController} from '@ionic/angular';
 
 @Component({
   selector: 'app-entrar',
@@ -7,14 +8,34 @@ import { Router } from '@angular/router';
   styleUrls: ['./entrar.page.scss'],
 })
 export class EntrarPage implements OnInit {
+  email: string;
+  senha:string;
 
-  constructor(private router: Router) { }
+
+  constructor(private servico: AutenticacaoService,private nav: NavController) { }
 
   ngOnInit() {
   }
 
-  cadastrado(){
-    this.router.navigate(['login']);
+  cadastrar(){
+    console.log("Método cadastra no ts da página");
+    let usuario = {};
+
+    usuario['email']=this.email;
+    usuario['senha']=this.senha;
+    
+    console.log(usuario);
+
+    this.servico.cadastrar(usuario).then(
+      resolve=>{
+        this.nav.navigateForward('dashboard');
+      },
+      error =>{
+        console.log("Deu erro.");
+      }
+    );
   }
+
+ 
 
 }
