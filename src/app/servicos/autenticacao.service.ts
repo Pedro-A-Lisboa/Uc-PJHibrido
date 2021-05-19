@@ -1,8 +1,5 @@
 import { Injectable } from '@angular/core';
-import { promise } from 'selenium-webdriver';
-
-import{AngularFireAuth} 
-from '@angular/fire/auth';
+import{AngularFireAuth} from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -10,6 +7,8 @@ from '@angular/fire/auth';
 export class AutenticacaoService {
 
   constructor( private auth:AngularFireAuth) { }
+
+
 
   cadastrar(usr){
      console.log("método cadastrar do serviço autenticação");
@@ -29,4 +28,8 @@ export class AutenticacaoService {
       this.auth.signInWithEmailAndPassword(usr.email,usr.senha).then(res => resolve(res),err =>reject(err))
 
     });
- }}
+ }
+
+
+
+  }

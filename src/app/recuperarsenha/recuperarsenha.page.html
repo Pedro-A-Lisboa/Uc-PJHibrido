@@ -12,10 +12,10 @@
             </ion-card-header>
             <ion-card-content>
                 <ion-item>
-                    <ion-input placeholder="E-mail"></ion-input>
+                    <ion-input [(ngModel)]="recEmail" placeholder="E-mail"></ion-input>
                 </ion-item>
                 <div class="bottom-section">
-                    <ion-button>Restaurar Senha</ion-button>
+                    <ion-button (click)="recSenha()">Restaurar Senha</ion-button>
                 </div>
             </ion-card-content>
         </ion-card>

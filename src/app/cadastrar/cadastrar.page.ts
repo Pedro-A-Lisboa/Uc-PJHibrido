@@ -1,37 +1,41 @@
-import { Component, OnInit } from '@angular/core';
 import { AutenticacaoService } from './../servicos/autenticacao.service';
+import { Component, OnInit } from '@angular/core';
 import {NavController} from '@ionic/angular';
-@Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
-})
-export class LoginPage implements OnInit {
 
-  email:string;
+@Component({
+  selector: 'app-cadastrar',
+  templateUrl: './cadastrar.page.html',
+  styleUrls: ['./cadastrar.page.scss'],
+})
+export class CadastrarPage implements OnInit {
+  email: string;
   senha:string;
+
 
   constructor(private servico: AutenticacaoService,private nav: NavController) { }
 
   ngOnInit() {
   }
-logar(){
-  console.log("Método cadastra no ts da página");
+
+  cadastrar(){
+    console.log("Método cadastra no ts da página");
     let usuario = {};
 
     usuario['email']=this.email;
     usuario['senha']=this.senha;
-    
+    usuario['acesso']="padrao";
     console.log(usuario);
 
-    this.servico.logar(usuario).then(
+    this.servico.cadastrar(usuario).then(
       resolve=>{
-        this.nav.navigateForward('adm');
+        this.nav.navigateForward('login');
       },
       error =>{
         console.log("Deu erro.");
       }
     );
+  }
 
-}
+
+
 }

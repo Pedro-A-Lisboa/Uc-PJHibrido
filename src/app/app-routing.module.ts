@@ -2,16 +2,13 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
+
   {
     path: '',
     redirectTo: 'menu',
     pathMatch: 'full'
   },
-  
+
   {
     path: 'menu',
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
@@ -20,10 +17,7 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
-  {
-    path: 'entrar',
-    loadChildren: () => import('./entrar/entrar.module').then( m => m.EntrarPageModule)
-  },
+
   {
     path: 'recuperarsenha',
     loadChildren: () => import('./recuperarsenha/recuperarsenha.module').then( m => m.RecuperarsenhaPageModule)
@@ -36,14 +30,27 @@ const routes: Routes = [
     path: 'adm',
     loadChildren: () => import('./adm/adm.module').then( m => m.AdmPageModule)
   },
-  {
-    path: 'registro',
-    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
-  },
+  
   {
     path: 'dashboard',
     loadChildren: () => import('./dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
+  {
+    path: 'cadastrar',
+    loadChildren: () => import('./cadastrar/cadastrar.module').then( m => m.CadastrarPageModule)
+  },
+  {
+    path: 'cadproduto',
+    loadChildren: () => import('./cadproduto/cadproduto.module').then( m => m.CadprodutoPageModule)
+  },
+
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+/*
+  
+*/
 ];
 
 @NgModule({

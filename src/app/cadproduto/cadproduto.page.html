@@ -1,0 +1,43 @@
+<ion-grid class="background-pic">
+  <ion-grid class="background-filter">
+     <ion-content>
+        <ion-card>
+            <ion-card-header>
+                <ion-card-title>
+                  Cadastrar Produto
+                </ion-card-title>
+            
+            </ion-card-header>
+            
+            <ion-card-content>
+              
+              <ion-item>    
+                <ion-label>Nome do produto:</ion-label>                             
+                <ion-input type="text" [(ngModel)]="nome"></ion-input>
+              </ion-item>
+                <ion-item>
+                  <ion-label position="floating">Descrição do produto:</ion-label>
+                  <ion-textarea [(ngModel)]="descricao"></ion-textarea>
+                </ion-item>
+                <ion-item>
+                  
+                  <ion-label>Quantidade do produto:</ion-label>
+                  <ion-input type="number" [(ngModel)]="quantidade"></ion-input>
+                </ion-item>
+              <ion-item>    
+                <ion-label>Valor do produto:</ion-label>                              
+                <ion-input type="text"[(ngModel)]="valor"></ion-input>
+              </ion-item>
+                <ion-item class="bottom-section">
+                    <ion-button (click)="cadastrar()">Cadastrar Produto</ion-button> 
+                </ion-item>
+                <ion-item class="bottom-section">
+                 <ion-button><a href="http://localhost:8100/adm">Cancelar</a></ion-button>
+              </ion-item>
+               
+             </ion-card-content>
+         </ion-card>
+
+    </ion-content>
+  </ion-grid>
+</ion-grid>

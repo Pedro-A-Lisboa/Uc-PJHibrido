@@ -54,25 +54,15 @@
   <ion-tabs  class="tabs-icon-top">
    <!-- Tab bar -->
    <ion-tab-bar slot="bottom">
-     <!-- <ion-tab-button class="tabs-top"> 
-       <ion-icon name="bag-handle-outline"></ion-icon>
-       <ion-label>Comprar</ion-label>
-     </ion-tab-button> -->
- 
-     <!-- <ion-tab-button  class="tabs-top">
-       <ion-icon name="people-circle-outline"></ion-icon>
-       <ion-label>Cadastrar Cliente</ion-label>
-     </ion-tab-button> -->
- 
- 
-     <ion-tab-button  class="tabs-top">
+
+     <ion-tab-button  class="tabs-top" (click)="Openproduto()">
        <ion-icon name="layers-outline"></ion-icon>
        <ion-label>Cadastrar Produto</ion-label>
      </ion-tab-button>
      
-     <ion-tab-button  class="tabs-top">
+     <ion-tab-button  class="tabs-top" (click)="lista()">
        <ion-icon name="list-outline"></ion-icon>
-       <ion-label>Lista...</ion-label>
+       <ion-label>Lista de Produtos</ion-label>
      </ion-tab-button>
  
  

@@ -1,0 +1,17 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyB0wL3bDBqHzWRzmf-G-CSIjaydN7GKKAk",
+    authDomain: "uc-pjhibrido.firebaseapp.com",
+    projectId: "uc-pjhibrido",
+    storageBucket: "uc-pjhibrido.appspot.com",
+    messagingSenderId: "1057545942480",
+    appId: "1:1057545942480:web:4d1b5ca532dcfa784c75d5"
+  };
+ 
+
+
+
+git init
+git add .
+git commit -m "commit 2"
+git remote add origin https://github.com/Pedro-A-Lisboa/Uc-PJHibrido.git
+git push -u origin master

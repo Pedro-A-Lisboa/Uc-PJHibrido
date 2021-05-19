@@ -15,4 +15,10 @@ export class AdmPage implements OnInit {
  OpenLogin(){
     this.router.navigate(['login']);
   }
+  Openproduto(){
+    this.router.navigate(['cadproduto']);
+  }
+  lista(){
+    this.router.navigate(['dashboard']);
+  }
 }

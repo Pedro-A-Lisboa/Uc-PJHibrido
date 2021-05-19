@@ -1,9 +1,27 @@
+
+<!-- ADMINISTRADOR -->
 <ion-header>
-  <ion-toolbar>
-    <ion-title>dashboard</ion-title>
-  </ion-toolbar>
-</ion-header>
+  <ion-toolbar class="nave">
+   <ion-title size="small" class="text-forn">Forninhos & Docinhos</ion-title>
+ </ion-toolbar>
+ </ion-header>
 
-<ion-content>
 
-</ion-content>
+ <ion-content>
+   <ion-title> Listar Produtos</ion-title>
+   <ion-card *ngFor= "let item of produtos">
+    <ion-label>Nome do produto:</ion-label>  
+    <ion-card-title>{{item.nome}}</ion-card-title>
+    <ion-label>Descrição:</ion-label>  
+    <ion-card-title>{{item.descricao}}</ion-card-title>
+    <ion-label>Quantidade disponível:</ion-label>  
+    <ion-card-title>{{item.quantidade}}</ion-card-title>
+    <ion-label>Preço do produto:</ion-label>  
+    <ion-card-title>{{item.valor}}</ion-card-title>
+
+    <ion-button  (click)="alterar()">Editar</ion-button>
+    <ion-button  (click)="excluir()"> Excluir</ion-button>
+ </ion-card>
+
+ </ion-content>
+ <ion-button  (click)="sair()">Sair</ion-button>
