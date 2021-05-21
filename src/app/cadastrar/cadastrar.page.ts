@@ -10,7 +10,7 @@ import {NavController} from '@ionic/angular';
 export class CadastrarPage implements OnInit {
   email: string;
   senha:string;
-
+  acesso:string;
 
   constructor(private servico: AutenticacaoService,private nav: NavController) { }
 

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {ProdutosService} from '../servicos/produtos.service';
+import { NavController } from '@ionic/angular';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.page.html',
@@ -8,7 +9,13 @@ import {ProdutosService} from '../servicos/produtos.service';
 })
 export class DashboardPage implements OnInit {
 produtos: any;
-  constructor(private servico: ProdutosService, private router: Router) { }
+nome: string;
+descricao:string;
+valor:string;
+quantidade:string;
+
+  constructor(private servico: ProdutosService, private router: Router,
+              private nav: NavController) { }
 
   ngOnInit() {
 
@@ -29,5 +36,12 @@ produtos: any;
 
   sair(){
     this.router.navigate(['adm']);
+  }
+
+  alterar(prod){
+    this.nav.navigateForward(['atlproduto', {id: prod.id, nome: prod.nome, descricao: prod.descricao, quantidade: prod.quantidade, valor:prod.valor}])
+  }
+  excluir(item){
+    this.servico.excluir(item);
   }
 }

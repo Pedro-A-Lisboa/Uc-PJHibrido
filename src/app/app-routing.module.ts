@@ -5,7 +5,7 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'menu',
+    redirectTo: 'cadproduto',
     pathMatch: 'full'
   },
 
@@ -47,6 +47,10 @@ const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'atlproduto',
+    loadChildren: () => import('./atlproduto/atlproduto.module').then( m => m.AtlprodutoPageModule)
   },
 /*
   

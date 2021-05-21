@@ -7,10 +7,10 @@ ion-content{
 
 }
 .background-pic{
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background: url('../../assets/icon/docee.jpg');
-    background-position: 30%;
+    // background-position: 30%;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -49,7 +49,7 @@ ion-input{
     width: 100%;
     height: 60px;
     border-radius: 15px;
-    border: 1px solid rgb(233, 89, 156);
+    border: 2px solid rgb(233, 89, 156);
     font-size: 18px;
     font-weight: 300;
     color: rgb(193, 189, 219);
