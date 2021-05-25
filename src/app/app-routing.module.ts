@@ -5,13 +5,8 @@ const routes: Routes = [
 
   {
     path: '',
-    redirectTo: 'cadproduto',
+    redirectTo: 'inicial',
     pathMatch: 'full'
-  },
-
-  {
-    path: 'menu',
-    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
   },
   {
     path: 'login',
@@ -51,6 +46,10 @@ const routes: Routes = [
   {
     path: 'atlproduto',
     loadChildren: () => import('./atlproduto/atlproduto.module').then( m => m.AtlprodutoPageModule)
+  },
+  {
+    path: 'inicial',
+    loadChildren: () => import('./inicial/inicial.module').then( m => m.InicialPageModule)
   },
 /*
   

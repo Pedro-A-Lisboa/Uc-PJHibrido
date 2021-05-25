@@ -28,21 +28,22 @@ ion-card{
     box-shadow: none;
     text-align: center;
     ion-card-title{
-        color: rgb(220, 96, 224);
-        font-size: 30px;
+    color: rgb(220, 96, 224);
+    font-size: 30px;
     }
 
-    ion-card-subtitle{
-        color: rgb(223, 213, 213);
-        font-size: 16px;
-        font-weight: 400;
-        a{
-            text-decoration: none;
-            font-weight: bold;
-            color: rgb(90, 51, 180);        
-            font-size: 16;
-        }
-    }
+ion-card-subtitle{
+    color: rgb(223, 213, 213);
+    font-size: 16px;
+    font-weight: 400;
+ }        
+a{
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(90, 51, 180);        
+    font-size: 16;
+}
+   
     ion-card-content{
         margin-top: 30px;
 
@@ -52,6 +53,7 @@ ion-card{
             --inner-border-width:0;
             --highlight-color-focus: none;
             margin-bottom: 15px;
+            --highlight-color-valid: none;
 
             ion-input{
                 width: 247px;
@@ -63,6 +65,7 @@ ion-card{
                 color: rgb(193, 189, 219);
                 --padding-start:30px;
                 text-shadow: none;
+                
             }
 
         }

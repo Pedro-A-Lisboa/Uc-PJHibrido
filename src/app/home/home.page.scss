@@ -17,7 +17,20 @@ ion-tabs{
 .text-forn{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
+  margin-top: 15px;
+
 }
 .tabs-icon-top{
   margin-top: 70%;
+}
+ion-button{
+  height: 40px;
+  width: 100px;
+  font-size: 14px;
+  text-transform: none;
+  --background:  rgb(201, 60, 219);
+  font-weight: 300;       
+  --border-radius: 10px;
+  
+     color:white;
 }

@@ -8,20 +8,24 @@
 
 
  <ion-content>
-   <ion-title> Listar Produtos</ion-title>
-   <ion-card *ngFor= "let item of produtos">
+   <ion-title class="title"> Listar Produtos</ion-title>
+   <ion-card class="card" *ngFor= "let item of produtos">
     <ion-label>Nome do produto:</ion-label>  
     <ion-card-title>{{item.nome}}</ion-card-title>
+    <ion-label>Imagem:</ion-label>  
+    <ion-card-title><img src={{item.caminho}}></ion-card-title>
+    
     <ion-label>Descrição:</ion-label>  
     <ion-card-title>{{item.descricao}}</ion-card-title>
     <ion-label>Quantidade disponível:</ion-label>  
     <ion-card-title>{{item.quantidade}}</ion-card-title>
     <ion-label>Preço do produto:</ion-label>  
     <ion-card-title>{{item.valor}}</ion-card-title>
-
-    <ion-button  (click)="alterar(item)">Editar</ion-button>
-    <ion-button  (click)="excluir(item)"> Excluir</ion-button>
+    <ion-button  (click)="alterar(item)" class="buton">Editar</ion-button>
+    <ion-button  (click)="excluir(item)" class="buton"> Excluir</ion-button>
  </ion-card>
 
+ <ion-button class="botao" (click)="sair()">Sair</ion-button>
+
  </ion-content>
- <ion-button  (click)="sair()">Sair</ion-button>
+ 

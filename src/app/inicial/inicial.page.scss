@@ -52,3 +52,14 @@ ion-card{
         justify-content: center;
     }
 }
+  ion-button{
+            height: 53px;
+            width: 247px;
+            font-size: 14px;
+            text-transform: none;
+            --background: rgb(57, 1, 59); 
+            font-weight: 300;       
+            --border-radius: 10px;
+            color: rgb(139, 125, 165);
+
+        }

@@ -28,8 +28,27 @@
               </ion-item>
               
             <ion-label>Imagem</ion-label> 
-              <ion-item>
-                <ion-input type="file"[(ngModel)]="imagem"></ion-input>
+              <ion-item *ngIf="!isUploading && !isUploaded">
+                <ion-input type="file"[(ngModel)]="imagem" (change)="uploadFile($event.target.files)"></ion-input>
+              </ion-item>
+
+              <ion-item *ngIf="isUploading && !isUploaded">
+                <ion-card-content>Selected File:<b>{{ fileName }}</b>
+                  <div *ngIf="percentage | async as pct">
+                    Progress: {{ pct | number }}%
+                    <ion-progress-bar value="{{ pct / 100 }}"></ion-progress-bar>
+                </div>
+                <div *ngIf="snapshot | async as snap">
+                    File Size: {{ snap.totalBytes }} Transfered: {{ snap.bytesTransferred }}
+                    <div *ngIf="snapshot && snap.bytesTransferred != snap.totalBytes">
+                        <ion-button color="warning" size="small" (click)="task.pause()" class="button is-warning">Pause</ion-button>
+                        <ion-button size="small" (click)="task.resume()" class="button is-info">Resume</ion-button>
+                        <ion-button color="danger" size="small" (click)="task.cancel()" class="button is-danger">Cancel</ion-button>
+                    </div>
+                </div>
+        
+                </ion-card-content>
+ 
               </ion-item>
                 
             <ion-item class="bottom-section">

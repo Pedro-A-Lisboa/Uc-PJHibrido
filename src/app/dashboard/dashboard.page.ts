@@ -13,7 +13,7 @@ nome: string;
 descricao:string;
 valor:string;
 quantidade:string;
-
+caminho:string;
   constructor(private servico: ProdutosService, private router: Router,
               private nav: NavController) { }
 
@@ -26,8 +26,8 @@ quantidade:string;
           nome: e.payload.doc.data()['nome'],
           descricao: e.payload.doc.data()['descricao'],
           quantidade: e.payload.doc.data()['quantidade'],
-          valor: e.payload.doc.data()['valor']
-
+          valor: e.payload.doc.data()['valor'],
+          caminho: e.payload.doc.data()['caminho']
         }
       })
       console.log(this.produtos);

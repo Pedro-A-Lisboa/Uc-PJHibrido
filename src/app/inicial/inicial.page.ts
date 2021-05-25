@@ -1,18 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
 @Component({
-  selector: 'app-menu',
-  templateUrl: './menu.page.html',
-  styleUrls: ['./menu.page.scss'],
+  selector: 'app-inicial',
+  templateUrl: './inicial.page.html',
+  styleUrls: ['./inicial.page.scss'],
 })
-export class MenuPage implements OnInit {
+export class InicialPage implements OnInit {
 
   constructor(private route: Router) { }
 
   ngOnInit() {
   }
   loginPage(){
-    this.route.navigate(['login']);
+    this.route.navigate(['home']);
   }
 }
